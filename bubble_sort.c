@@ -1,16 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
 
-int bubble_sort(int arr[])
+void bubble_sort(int arr[],int length)
 {
     int i;
     int j;
-    int length = sizeof(arr);
-    printf("%d",length);
-
-    for(i =0; i < length-1; i++){
-        for(j = 0; j<length; j++){
+    
+    for(i =0; i < length; i++){
+        for(j = 0; j<length-1; j++){
             if(arr[j] > arr[j+1]){
                 int temp = arr[j];
                 arr[j] = arr[j+1];
@@ -24,11 +21,13 @@ int bubble_sort(int arr[])
 int main()
 {
     int i;
-    int arr[] = {8,2,6,1,5};
+    int arr[] = {2,6,1,5,45,21,32};
+    
+    int length = sizeof(arr)/4;//use sizeof() in main function and not in user defined function.
 
-    bubble_sort(arr);
+    bubble_sort(arr,length);
 
-    for(i = 0; i < sizeof(arr)/4; i++){
-        printf("%d" , arr[i]);
+    for(i = 0; i < length; i++){
+        printf("%d \t" , arr[i]);
     }
 }
