@@ -6,13 +6,13 @@ int binary_search(int arr[],int length, int key)
     int start = 0;
     int end = length-1;
 
-    while (start < end){
-        int mid = (start+end)/2;
+    while (start <= end){
+        int mid = start+(end-start)/2;
         if (key == arr[mid])
         {
             return mid;
         }
-        else if (key > arr[mid])
+        else if (key >= arr[mid])
         {
             start = mid+1;
         }
@@ -26,7 +26,7 @@ int binary_search(int arr[],int length, int key)
 
 int main()
 {
-    int arr[] = {1,3,5,6,7,8,10,13};//array must be sorted
+    int arr[] = {1,3,5,7,8,9,10,13,15,17};//array must be sorted
     
     int length = sizeof(arr)/4;
 
