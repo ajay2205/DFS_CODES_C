@@ -35,11 +35,5 @@ int main()
     scanf("%d", &key);
 
     int element_index = binary_search(arr,length,key);
-    if (element_index == -1)
-    {
-        printf("element not found");
-    }
-    else{
-    printf("element found at index %d",element_index);
-    }
+    printf("%d",element_index);
 }
