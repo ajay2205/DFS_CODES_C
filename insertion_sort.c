@@ -15,7 +15,7 @@ void insertion_sort(int arr[],int length)
             arr[j+1] = arr[j];//shifting sorted 
             j--; 
         }
-        arr[j+1] = temp;//making unsorted element as sorted
+        arr[j+1] = temp;//making unsorted element as sorted 
     }
 }
 

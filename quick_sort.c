@@ -63,7 +63,7 @@ void printArray(int array[], int size) {
 
 // main function
 int main() {
-  int data[] = {13,1,6,7,3,9,15,22};
+  int data[] = {1,9,2,8,3,7,4,6,0,5};
   
   int n = sizeof(data) / sizeof(data[0]);
   
